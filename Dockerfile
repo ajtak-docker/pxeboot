@@ -1,5 +1,5 @@
 FROM centos:latest
-RUN dnf install -y dnsmasq tftp-server nano syslinux nfs-utils \
+RUN yum install -y dnsmasq tftp-server nano syslinux nfs-utils \
     && mv /etc/dnsmasq.conf /etc/dnsmasq.conf.backup
 
 RUN mkdir -p /etc/tftpboot \
@@ -24,4 +24,4 @@ ADD dnsmasq.conf /etc/dnsmasq.conf
 ADD default.conf /etc/tftpboot/pxelinux.cfg/default
 
 
-ENTRYPOINT ["mysql"]
+#ENTRYPOINT ["mysql"]

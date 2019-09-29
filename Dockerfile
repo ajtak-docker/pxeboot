@@ -16,4 +16,4 @@ RUN chmod 755 /usr/local/bin/entrypoint.sh
 
 RUN rc-update add dnsmasq
 
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+#ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]

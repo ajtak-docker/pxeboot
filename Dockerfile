@@ -19,4 +19,4 @@ RUN chmod 777 /start_dnsmasq.sh
 #RUN rc-update add dnsmasq
 #ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
-CMD /start_dnsmasq.sh
+ENTRYPOINT ["dnsmasq", "-k"]

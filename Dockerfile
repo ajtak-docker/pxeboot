@@ -14,7 +14,7 @@ ADD default.conf /etc/tftpboot/pxelinux.cfg/default
 ADD entrypoint.sh /usr/local/bin
 RUN chmod 755 /usr/local/bin/entrypoint.sh
 
-RUN rc-update add dnsmasq \
-    && /etc/init.d/dnsmasq restart
+RUN rc-update add dnsmasq
+RUN /etc/init.d/dnsmasq restart
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]

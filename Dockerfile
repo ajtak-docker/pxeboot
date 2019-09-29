@@ -1,12 +1,14 @@
 FROM alpine:3.7
-MAINTAINER Jakub Fridrich <http://jafr.eu>
+MAINTAINER Jakub Fridrich (https://jafr.eu/)
 
-RUN apk --no-cache add dnsmasq
+RUN apk --no-cache add dnsmasq syslinux nfs-utils
 
-COPY dnsmasq.conf /etc/
-COPY resolv.dnsmasq.conf /etc/
+RUN mkdir -p /etc/tftpboot \
+    && cp -rs /usr/share/syslinux/* /etc/tftpboot \
+    && mkdir -p /etc/tftpboot/pxelinux.cfg
 
-VOLUME /etc/dnsmasq.hosts
+ADD dnsmasq.conf /etc/dnsmasq.conf
+ADD default.conf /etc/tftpboot/pxelinux.cfg/default
 
 EXPOSE 53/udp
 

@@ -8,8 +8,5 @@
 #   && umount /mnt/nfs \
 #   && rm -rf /mnt/nfs \
 
-systemctl start dnsmasq \
-    && systemctl start tftpd \
-    && systemctl enable dnsmasq \
-    && systemctl enable tftpd
+
 

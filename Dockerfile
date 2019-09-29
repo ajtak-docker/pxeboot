@@ -9,7 +9,10 @@ RUN mkdir -p /etc/tftpboot \
 
 COPY dnsmasq.conf /etc/dnsmasq.conf
 COPY default.conf /etc/tftpboot/pxelinux.cfg/default
+COPY start_dnsmasq.sh /
+
+RUN chmod +x /start_dnsmasq.sh
 
 EXPOSE 53/udp
 
-ENTRYPOINT ["dnsmasq", "-k"]
+ENTRYPOINT ["/start_dnsmasq.sh"]

@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 RUN apk update && apk upgrade
-RUN apk add dnsmasq nano syslinux nfs-utils \
+RUN apk add dnsmasq nano syslinux nfs-utils openrc \
     && mv /etc/dnsmasq.conf /etc/dnsmasq.conf.backup
 
 RUN mkdir -p /etc/tftpboot \
@@ -14,7 +14,7 @@ ADD default.conf /etc/tftpboot/pxelinux.cfg/default
 ADD entrypoint.sh /usr/local/bin
 RUN chmod 755 /usr/local/bin/entrypoint.sh
 
-RUN rc-service dnsmasq start \
+RUN /etc/init.d/dnsmasq start \
     && rc-update add dnsmasq
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]

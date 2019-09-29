@@ -1,0 +1,10 @@
+version: "3"
+services:
+  app:
+    image: username/repo:tag
+    #ports:
+    #  - "4000:80"
+    #networks:
+    #  - webnet
+#networks:
+  #webnet:

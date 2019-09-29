@@ -15,4 +15,4 @@ RUN chmod +x /start_dnsmasq.sh
 
 EXPOSE 53/udp
 
-ENTRYPOINT ["/start_dnsmasq.sh"]
+CMD ["/start_dnsmasq.sh"]

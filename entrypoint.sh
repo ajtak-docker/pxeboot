@@ -12,3 +12,4 @@ systemctl start dnsmasq \
     && systemctl start tftpd \
     && systemctl enable dnsmasq \
     && systemctl enable tftpd
+

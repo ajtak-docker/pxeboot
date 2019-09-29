@@ -7,8 +7,8 @@ RUN mkdir -p /etc/tftpboot \
     && cp -rs /usr/share/syslinux/* /etc/tftpboot \
     && mkdir -p /etc/tftpboot/pxelinux.cfg
 
-ADD dnsmasq.conf /etc/dnsmasq.conf
-ADD default.conf /etc/tftpboot/pxelinux.cfg/default
+COPY dnsmasq.conf /etc/
+COPY default.conf /etc/tftpboot/pxelinux.cfg
 
 EXPOSE 53/udp
 

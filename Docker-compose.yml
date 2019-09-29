@@ -1,10 +1,14 @@
 version: "3"
 services:
   app:
-    image: username/repo:tag
-    #ports:
+    image: ajtak/pxeboot:latest
+    environment:
+      - NFS_PATH=192.168.0.150:/srv/storage/
+      -
+
+      #ports:
     #  - "4000:80"
     #networks:
     #  - webnet
-#networks:
+  #networks:
   #webnet:

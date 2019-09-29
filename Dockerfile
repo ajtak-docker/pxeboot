@@ -3,7 +3,7 @@ RUN dnf install -y dnsmasq tftp-server nano syslinux nfs-utils \
     && mv /etc/dnsmasq.conf /etc/dnsmasq.conf.backup
 
 RUN mkdir -p /etc/tftpboot \
-    && cp -rs /usr/share/syslinux/* /etc/tftpboot
+    && cp -rs /usr/share/syslinux/* /etc/tftpboot \
     && mkdir /etc/tftpboot/pxelinux.cfg
 
 ## NFS Mount

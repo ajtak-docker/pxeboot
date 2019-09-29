@@ -1,9 +1,9 @@
 FROM alpine:3.7
-MAINTAINER Gerard Braad <me@gbraad.nl>
+MAINTAINER Jakub Fridrich <http://jafr.eu>
 
 RUN apk --no-cache add dnsmasq
 
-COPY remov/dnsmasq.conf.my /etc/
+COPY dnsmasq.conf /etc/
 COPY resolv.dnsmasq.conf /etc/
 
 VOLUME /etc/dnsmasq.hosts

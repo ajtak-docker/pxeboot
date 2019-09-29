@@ -12,5 +12,5 @@ mount() {
   && cp /mnt/nfs/casper/initrd /etc/tftpboot/images/ubuntu/initrd
 }
 
-mount
+#mount
 start

@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:latest
 MAINTAINER Jakub Fridrich (https://jafr.eu/)
 
 RUN apk --no-cache add dnsmasq syslinux nfs-utils

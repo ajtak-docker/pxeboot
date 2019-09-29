@@ -2,7 +2,7 @@ FROM alpine:latest
 MAINTAINER Jakub Fridrich (https://jafr.eu/)
 
 RUN apk update && apk upgrade
-RUN apk --no-cache add dnsmasq nano syslinux nfs-utils openrc \
+RUN apk --no-cache add dnsmasq syslinux nfs-utils \
     && mv /etc/dnsmasq.conf /etc/dnsmasq.conf.backup
 
 RUN mkdir -p /etc/tftpboot \

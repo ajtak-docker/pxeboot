@@ -1,6 +1,8 @@
 #!/bin/bash
 
 ## NFS Mount -- outside dockerhub
+
+mkdir -p /etc/tftpboot/images/ubuntu \
 mkdir -p /mnt/nfs \
    && mount -t nfs ${NFS_PATH} /mnt/nfs/ \
    && cp /mnt/nfs/casper/vmlinuz /etc/tftpboot/images/ubuntu/vmlinuz \

@@ -14,7 +14,7 @@ ADD dnsmasq.conf /etc/dnsmasq.conf
 
 ADD start_dnsmasq.sh /
 
-#RUN chmod 775 /start_dnsmasq.sh
+RUN chmod 777 /start_dnsmasq.sh
 #ADD entrypoint.sh /usr/local/bin
 #RUN rc-update add dnsmasq
 #ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]

@@ -10,9 +10,9 @@ RUN mkdir -p /etc/tftpboot \
 
 ADD dnsmasq.conf /etc/dnsmasq.conf
 ADD default.conf /etc/tftpboot/pxelinux.cfg/default
-ADD entrypoint.sh /usr/local/sbin
 
-RUN chmod 755 /usr/local/sbin/entrypoint.sh
+ADD entrypoint.sh /usr/local/bin
+RUN chmod 755 /usr/local/bin/entrypoint.sh
 
 RUN rc-service dnsmasq start \
     && rc-update add dnsmasq

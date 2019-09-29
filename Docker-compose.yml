@@ -5,6 +5,7 @@ services:
     image: ajtak/pxeboot:latest
     environment:
       - NFS_PATH="192.168.0.150:/srv/storage/"
+      - reinit=1
 
       #ports:
     #  - "4000:80"

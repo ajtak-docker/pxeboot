@@ -4,8 +4,7 @@ services:
     container_name: pxeboot
     image: ajtak/pxeboot:latest
     environment:
-      - NFS_PATH=192.168.0.150:/srv/storage/
-      -
+      - NFS_PATH="192.168.0.150:/srv/storage/"
 
       #ports:
     #  - "4000:80"

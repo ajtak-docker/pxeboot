@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/bin/sh
 
-exec /usr/sbin/dnsmasq -k
+/usr/sbin/dnsmasq -k

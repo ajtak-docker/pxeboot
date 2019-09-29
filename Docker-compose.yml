@@ -2,12 +2,10 @@ version: "3"
 services:
   app:
     container_name: pxeboot
-    #image: ajtak/pxeboot:latest
-    image: gbraad/dnsmasq-alpine
+    image: ajtak/pxeboot:latest
+    #image: gbraad/dnsmasq-alpine
     environment:
       - NFS_PATH="192.168.0.150:/srv/storage/"
-      - reinit=1
-
       #ports:
     #  - "4000:80"
     #networks:

@@ -1,6 +1,7 @@
 version: "3"
 services:
   app:
+    network_mode: host
     container_name: pxeboot
     image: ajtak/pxeboot:latest
     ports:

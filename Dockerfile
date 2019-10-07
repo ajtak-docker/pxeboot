@@ -13,6 +13,6 @@ COPY start_dnsmasq.sh /
 
 RUN chmod +x /start_dnsmasq.sh
 
-EXPOSE 53/udp 53/tcp
+EXPOSE 53
 
 CMD ["/start_dnsmasq.sh"]
